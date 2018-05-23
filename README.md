@@ -47,3 +47,17 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 8.在样式里面引入其他css文件,import前面需要加@
 9.引入样式写路径的时候@代表根目录为src,需要在@前面加~
 10.将某个路径用符号代替,找到webpack.base.config.js里面resolve下面有一个alias属性(需要重启下服务器)
+11.开发轮播图需要借助一个插件vue-awesome-swiper(使用稳定的版本2.6.7)
+12.配置vue-awesome-swiper相关信息(在github上面搜索vue-awesome-swiper,在全局中添加配置信息,新建swiper并配置template) 
+13.在浏览器中如果将network中的网络改为3G,图片显示过慢时会造成图片错位。所以此时需要在swiper标签外层加一个div标签并设置一些样式上的东西
+第一种写法：
+width: 100%;
+    height:0;
+    overflow: hidden;
+    padding-bottom: 31.25%;
+第二种写法：
+    width: 100%;er5
+    height: 31.25%vw 31.25%viewport的高度
+14.export,import只能在编译时加载模块
+    export default 指定默认输出,在使用import引用的时可以为匿名函数指定任意名字。引用时可以不加括号。
+15.img外层添加一个div,用于将img图片撑开
