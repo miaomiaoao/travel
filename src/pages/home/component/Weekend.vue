@@ -47,7 +47,6 @@ export default {
 
 <style lang="scss" scoped>
   .title {
-    margin-top: .2rem;
     line-height: .8rem;
     background: #eee;
     text-indent: .2rem;

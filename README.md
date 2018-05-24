@@ -61,3 +61,16 @@ width: 100%;
 14.export,import只能在编译时加载模块
     export default 指定默认输出,在使用import引用的时可以为匿名函数指定任意名字。引用时可以不加括号。
 15.img外层添加一个div,用于将img图片撑开
+16.如果我并不希望将一些内容提交到线上,那么可以
+将文件夹添加到.gitignore目录下
+17.axios的请求地址 在index.js里面有一个配置文件
+在开发环境下,vue的脚手架工具会自动将api替换成mock
+这个功能实际上是webpack-dev-server这个工具提供的
+proxyTable: {
+    '/api': {
+        target: 'http://localhost:8080',
+        pathRewrite: {
+            '^/api': '/static/mock'
+        }
+    }
+}

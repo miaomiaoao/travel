@@ -15,52 +15,11 @@
 <script>
 export default {
   name: 'HomeIcon',
+  props: {
+    iconLists: Array
+  },
   data () {
     return {
-      iconLists: [{
-        id: '000001',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-        desc: '热门景点热门景点热门景点热门景点热门景点'
-      },
-      {
-        id: '000002',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/3e/86314b2af03b7502.png',
-        desc: '水上乐园'
-      },
-      {
-        id: '000003',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png',
-        desc: '必游榜单'
-      },
-      {
-        id: '000004',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1804/95/8d02011d149bdb02.png',
-        desc: '成都定制'
-      },
-      {
-        id: '000005',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/97/02f5043b51b2102.png',
-        desc: '情迷九寨'
-      },
-      {
-        id: '000006',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/20/831d62d2e1c7be02.png',
-        desc: '芙蓉七景'
-      },
-      {
-        id: '000007',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/b6/37560ece9c62b502.png',
-        desc: '成都周边'
-      },
-      {
-        id: '000008',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1804/ed/cf572be30fc32f02.png',
-        desc: 'Q+精选'
-      }, {
-        id: '000009',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1804/ed/cf572be30fc32f02.png',
-        desc: 'Q+精选'
-      }],
       swiperOption: {
         pagination: '.swiper-pagination',
         loop: false

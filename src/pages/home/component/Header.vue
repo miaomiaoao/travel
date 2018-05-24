@@ -8,13 +8,16 @@
       搜索旅游地/酒店/景点
     </div>
     <div class="home-header-right">
-      <span class="iconfont">&#xe69b;</span>
+      <span class="iconfont">{{ city }}&#xe614;</span>
     </div>
   </div>
 </template>
 <script>
 export default {
-  name: 'HomeHeader'
+  name: 'HomeHeader',
+  props: {
+    city: String
+  }
 }
 </script>
 <style lang="scss" scoped>
@@ -56,14 +59,15 @@ export default {
 
   .home-header-right {
     height: .64rem;
-    width: .64rem;
+    width: 1rem;
     line-height: .64rem;
     float: right;
-    background: #ffffff;
-    border-radius: 50%;
+    // background: #ffffff;
+    // border-radius: 50%;
     margin: .11rem .11rem;
     .iconfont {
-        font-size: 18px;
+        font-size: 14px;
+        color: white;
     }
   }
 }
