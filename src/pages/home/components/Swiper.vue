@@ -17,7 +17,7 @@ export default {
     return {
       swiperOption: {
         pagination: '.swiper-pagination',
-        loop: true
+        autoplay: true
       },
       swiperImgList: [{
         id: 0,
