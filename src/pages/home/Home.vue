@@ -3,19 +3,21 @@
     <home-header></home-header>
     <Swiper></Swiper>
     <icons></icons>
-    <router-link to="/city" >城市列表</router-link>
+    <recommend></recommend>
   </div>
 </template>
 <script>
 import HomeHeader from './components/Header'
 import Swiper from './components/Swiper'
 import Icons from './components/Icons'
+import Recommend from './components/Recommend'
 export default {
   name: 'Home',
   components: {
     HomeHeader,
     Swiper,
-    Icons
+    Icons,
+    Recommend
   }
 }
 </script>
