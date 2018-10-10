@@ -1,56 +1,18 @@
 <template>
   <div>
-    <home-header :city="city"></home-header>
-    <home-swiper :swiperLists="swiperLists"></home-swiper>
-    <home-icon :iconLists="iconLists"></home-icon>
-    <home-recommend :recommendLists="recommendLists"></home-recommend>
-    <home-weekend></home-weekend>
+    <home-header></home-header>
+    <Swiper></Swiper>
+    <router-link to="/city" >城市列表</router-link>
   </div>
 </template>
 <script>
-import HomeHeader from './component/Header.vue'
-import HomeSwiper from './component/Swiper.vue'
-import HomeIcon from './component/Icon.vue'
-import HomeRecommend from './component/Recommend.vue'
-import HomeWeekend from './component/Weekend.vue'
-import axios from 'axios'
+import HomeHeader from './components/Header'
+import Swiper from './components/Swiper'
 export default {
   name: 'Home',
-  data () {
-    return {
-      city: '',
-      swiperLists: [],
-      iconLists: [],
-      recommendLists: []
-    }
-  },
   components: {
     HomeHeader,
-    HomeSwiper,
-    HomeIcon,
-    HomeRecommend,
-    HomeWeekend
-  },
-  methods: {
-    getHomeInfo () {
-      axios.get('/api/index.json')
-        .then(this.getHomeInfoSucc)
-    },
-    getHomeInfoSucc (res) {
-      res = res.data
-      if (res.ret && res.data) {
-        this.city = '北京'
-        this.swiperLists = res.data.swiperLists
-        this.iconLists = res.data.iconLists
-        this.recommendLists = res.data.recommendLists
-        console.log(this.swiperLists)
-        console.log('***************')
-      }
-      console.log(res)
-    }
-  },
-  mounted () {
-    this.getHomeInfo()
+    Swiper
   }
 }
 </script>
