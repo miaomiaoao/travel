@@ -4,7 +4,7 @@
     <div class="header-input">
       <span class="iconfont">&#xe651;</span>输入景点/城市/游玩/主题</div>
     <div class="header-right">
-      城市
+      {{city}}
       <span class="iconfont">&#xe65c;</span>
       </div>
   </div>
@@ -12,7 +12,10 @@
 <script>
 
 export default {
-  name: 'Header'
+  name: 'Header',
+  props: {
+    city: String
+  }
 }
 </script>
 <style lang="stylus" scoped>

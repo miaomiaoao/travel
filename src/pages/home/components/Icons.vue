@@ -9,7 +9,6 @@
                 <p class="icon-desc">{{item.desc}}</p>
             </div>
           </swiper-slide>
-          <div class="swiper-pagination"  slot="pagination"></div>
       </swiper>
   </div>
 </template>
@@ -74,11 +73,14 @@ export default {
       ]
     }
   },
+  props: {
+    list: Array
+  },
   computed: {
     pages () {
       const pages = []
-      if (this.iconLists.length > 8) {
-        this.iconLists.forEach((item, index) => {
+      if (this.list.length > 8) {
+        this.list.forEach((item, index) => {
           const page = Math.floor(index / 8)
           if (!pages[page]) {
             pages[page] = []
