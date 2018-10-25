@@ -2,19 +2,22 @@
   <div class="header">
     <div class="header-left iconfont">&#xe660;</div>
     <div class="header-input">
-      <span class="iconfont">&#xe651;</span>输入景点/城市/游玩/主题</div>
-    <div class="header-right">
-      {{city}}
-      <span class="iconfont">&#xe65c;</span>
+      <span class="iconfont">&#xe651;</span>输入景点/城市/游玩/主题
+    </div>
+    <router-link to="/city">
+       <div class="header-right">
+        {{this.city}}
+        <span class="iconfont">&#xe65c;</span>
       </div>
+    </router-link>
   </div>
 </template>
 <script>
-
+import { mapState } from 'vuex'
 export default {
   name: 'Header',
-  props: {
-    city: String
+  computed: {
+    ...mapState(['city'])
   }
 }
 </script>
@@ -24,6 +27,8 @@ export default {
      background: #00bcd4
      line-height: .86rem
      color: #fff
+     a
+      color: #fff
      .header-left
         width: .64rem
         float: left
@@ -39,8 +44,8 @@ export default {
         color: #ccc
         padding-left: 0.2rem
       .header-right
-        width: 1.22rem
+        padding-left: .2rem
+        min-width: 1.04rem
         float: right
         text-align: center;
-
 </style>

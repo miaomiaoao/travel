@@ -1,6 +1,6 @@
 <template>
   <div>
-    <home-header :city="city"></home-header>
+    <home-header></home-header>
     <Swiper :list="swiperLists"></Swiper>
     <icons :list="iconLists"></icons>
     <recommend :list="recommendLists"></recommend>
@@ -25,7 +25,6 @@ export default {
   },
   data () {
     return {
-      city: '',
       swiperLists: [],
       iconLists: [],
       recommendLists: [],
@@ -42,9 +41,6 @@ export default {
     getHomeInfoSuccess (rst) {
       if (rst.data.ret && rst.data.data) {
         const data = rst.data.data
-        console.log(data)
-        console.log('***************')
-        this.city = data.city
         this.swiperLists = data.swiperLists
         this.iconLists = data.iconLists
         this.recommendLists = data.recommendLists
